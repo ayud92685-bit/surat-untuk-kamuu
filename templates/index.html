@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe5ec">
+  <title>This Letter Is for U, BB 💌</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
+    <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+  </div>
+
+  <main class="page">
+    <p class="tiny-note">a little something, just for you ♡</p>
+    <h1>This letter is for u, bb <span>♡</span></h1>
+    <p class="subtitle">aku punya sesuatu yang pengen kamu baca...</p>
+
+    <section class="card" id="letterCard" aria-live="polite">
+      <div class="envelope-wrap" id="envelopeWrap">
+        <button class="envelope-button" id="openLetter" aria-label="Buka surat">
+          <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="letter-paper"><span>for u ♡</span></div>
+            <div class="envelope-front"></div>
+            <div class="seal">♥</div>
+          </div>
+        </button>
+        <p class="instruction">ada surat kecil buat kamu 💌</p>
+        <button class="primary-button" id="startButton">Click di sini, bb ♡</button>
+      </div>
+
+      <div class="message hidden" id="messagePanel">
+        <div class="step" id="stepLabel">surat kecil untuk kamu · 1/4</div>
+        <div class="mini-heart">♡</div>
+        <h2 id="messageTitle">hai, kamu...</h2>
+        <p id="messageText"></p>
+        <div class="progress" aria-label="Progres membaca surat"><span id="progressBar"></span></div>
+        <button class="primary-button" id="nextButton">Baca selanjutnya →</button>
+      </div>
+
+      <div class="ending hidden" id="endingPanel">
+        <div class="bouquet" aria-label="Buket bunga">💐</div>
+        <p class="eyebrow">a little bouquet for you</p>
+        <h2>flowers for u, bb 🌷</h2>
+        <p class="ending-text">Kalau hari ini terasa berat, semoga bunga kecil ini jadi pengingat bahwa kamu juga pantas menerima hal-hal indah. Pelan-pelan aja, ya. Aku bangga sama kamu. ♡</p>
+        <div class="flower-row" aria-hidden="true">🌷 🌸 🌼 🌷 🌸</div>
+        <button class="secondary-button" id="restartButton">Baca lagi dari awal ↺</button>
+        <p class="signature">with love, always ♡</p>
+      </div>
+    </section>
+
+    <footer>dibuat dengan sedikit cinta dan banyak doa ♡</footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
